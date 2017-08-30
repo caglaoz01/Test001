@@ -1,0 +1,43 @@
+{
+  "name": "test",
+  "version": "0.0.2",
+  "author": "cagla",
+  "description": "Test Project",
+  "private": true,
+  "repository": "git",
+  "engines": {
+    "node": "8.0.0",
+    "npm": "3.8.6"
+  },
+  "main": "src/main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron src/main.js",
+    "start:debug": "npm run start -- debug",
+    "dist": "npm run dist:osx",
+    "dist:osx": "build --platform darwin",
+    "launch": "grunt launch",
+    "ship": "grunt ship",
+    "watch": "grunt wLocal"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "electron-builder": "^5.10.1",
+    "electron-prebuilt": "^1.2.5",
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-shell": "^2.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.30.0",
+    "jquery": "^3.1.1",
+    "minimist": "^1.2.0"
+  },
+  "build": {
+    "appId": "de.bild.sti",
+    "app-category-type": "public.app-category.utilities",
+    "productName": "Test"
+  }
+}
